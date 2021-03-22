@@ -1,18 +1,8 @@
 import {APIGatewayEvent, Context} from 'aws-lambda';
 import { getUser, doesUserExist } from '../data/users';
-import User from '../models/User';
 
 
-export async function handler(event: APIGatewayEvent, context: Context) {
-    if (!event || !event.body || !(JSON.parse(event.body) instanceof User)) {
-        return JSON.stringify({
-            statusCode: 400,
-            body: {
-                'error': 'Invalid request.'
-            }
-        });
-    }
-    
+export async function handler(event: APIGatewayEvent, context: Context) {    
     const pathParameters = event.pathParameters;
 
     if(!pathParameters || pathParameters.username === undefined) {
@@ -30,7 +20,7 @@ export async function handler(event: APIGatewayEvent, context: Context) {
         if (userDoesExist) {
             const user = await getUser(username);
             return JSON.stringify({
-                statusCode: 400,
+                statusCode: 200,
                 body: user
             });
         } else {
