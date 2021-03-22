@@ -1,13 +1,1 @@
-[
-    {"username":"test1","password":"password1","emailaddress":"test1@email.com","firstName": "fName1", "lastName": "lName1"},
-    {"username":"test3","password":"password3","emailaddress":"test3@email.com","firstName": "fName3", "lastName": "lName3"},
-    {"username":"test4","password":"password4","emailaddress":"test4@email.com","firstName": "fName4", "lastName": "lName4"},
-    {"username":"test5","password":"password5","emailaddress":"test5@email.com","firstName": "fName5", "lastName": "lName5"},
-    {"username":"test6","password":"password6","emailaddress":"test6@email.com","firstName": "fName6", "lastName": "lName6"},
-    {"username":"test7","password":"password7","emailaddress":"test7@email.com","firstName": "fName7", "lastName": "lName7"},
-    {"username":"test8","password":"password8","emailaddress":"test8@email.com","firstName": "fName8", "lastName": "lName8"},
-    {"username":"test9","password":"password9","emailaddress":"test9@email.com","firstName": "fName9", "lastName": "lName9"},
-    {"username":"test10","password":"password10","emailaddress":"test10@email.com","firstName": "fName10", "lastName": "lName10"},
-    {"username":"test11","password":"password11","emailaddress":"test11@email.com","firstName": "fName11", "lastName": "lName11"},
-    {"username":"test12","password":"password12","emailaddress":"test12@email.com","firstName": "fName12", "lastName": "lName12"}
-]
+[{"username":"test1","password":"password1","emailaddress":"test1@email.com","firstName":"fName1","lastName":"lName1"},{"username":"test3","password":"password3","emailaddress":"test3@email.com","firstName":"fName3","lastName":"lName3"},{"username":"test5","password":"password5","emailaddress":"test5@email.com","firstName":"fName5","lastName":"lName5"},{"username":"test6","password":"password6","emailaddress":"test6@email.com","firstName":"fName6","lastName":"lName6"},{"username":"test7","password":"password7","emailaddress":"test7@email.com","firstName":"fName7","lastName":"lName7"},{"username":"test8","password":"password8","emailaddress":"test8@email.com","firstName":"fName8","lastName":"lName8"},{"username":"test9","password":"password9","emailaddress":"test9@email.com","firstName":"fName9","lastName":"lName9"},{"username":"test10","password":"password10","emailaddress":"test10@email.com","firstName":"fName10","lastName":"lName10"},{"username":"test11","password":"password11","emailaddress":"test11@email.com","firstName":"fName11","lastName":"lName11"},{"username":"test12","password":"password12","emailaddress":"test12@email.com","firstName":"fName12","lastName":"lName12"}]
