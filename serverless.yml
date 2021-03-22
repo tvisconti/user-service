@@ -1,0 +1,94 @@
+service:
+    name: user-service
+plugins:
+    - serverless-plugin-typescript
+    - serverless-offline
+provider:
+    name: aws
+    region: us-west-2
+    runtime: nodejs12.x
+    environment:
+
+    # iamRoleStatements:
+    #     - Effect: Allow
+    #       Action:
+
+    #       Resource:
+
+# custom:
+
+
+functions:
+    auth: 
+      handler: src/authorizers/jwt.handler
+    viewAll:
+      handler: src/handlers/get.handler
+      events:
+        - http:
+            path: user/{username}
+            method: get
+            authorizer:
+              name: auth
+              type: token
+              identitySource: method.request.header.Authorization
+              resultTtlInSeconds: 0
+            cors: true
+    create:
+      handler: src/handlers/create.handler
+      events:
+        - http:
+            path: user
+            method: post
+            authorizer:
+              name: auth
+              type: token
+              identitySource: method.request.header.Authorization
+              resultTtlInSeconds: 0
+            cors: true
+    update:
+      handler: src/handlers/update.handler
+      events:
+        - http:
+            path: user/{username}
+            method: put
+            authorizer:
+              name: auth
+              type: token
+              identitySource: method.request.header.Authorization
+              resultTtlInSeconds: 0
+            cors: true
+    login:
+      handler: src/handlers/login.handler
+      events:
+        - http:
+            path: user/login
+            method: post
+            authorizer:
+              name: auth
+              type: token
+              identitySource: method.request.header.Authorization
+              resultTtlInSeconds: 0
+            cors: true
+    logout:
+      handler: src/handlers/logout.handler
+      events:
+        - http:
+            path: user/logout
+            method: post
+            cors: true
+    delete:
+      handler: src/handlers/delete.handler
+      events:
+        - http:
+            path: user/{username}
+            method: delete
+            cors: true
+
+# resources:
+#     Resources:
+
+package:
+  exclude:
+    - node_modules/**/*
+    - package-lock.json
+    - README.md
